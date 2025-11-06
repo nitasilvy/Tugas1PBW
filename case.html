@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkinCare Guide - Kenali Kulitmu</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* agar scroll halus */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="fade-in">
+    <div class="logo">🌿 SkinCare Guide</div>
+    <nav>
+      <a href="#tipe">Tipe Kulit</a>
+      <a href="#perawatan">Perawatan</a>
+      <a href="#penyakit">Penyakit Kulit</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero fade-in" id="hero">
+    <div class="hero-content fade-up">
+      <h1>Kenali Kulit Wajahmu dan Rawat dengan Benar</h1>
+      <p>Pelajari tipe kulit wajahmu, temukan cara perawatan yang tepat, dan hindari penyakit kulit sejak dini.</p>
+      <!-- Ganti button menjadi anchor agar bisa scroll -->
+      <a href="#tipe" class="cta bounce">Pelajari Sekarang</a>
+    </div>
+    <div class="hero-image-container">
+      <img src="foto1.jpeg" alt="Perawatan Kulit Wajah" class="hero-image">
+    </div>
+  </section>
+
+  <!-- TIPE KULIT -->
+  <section id="tipe" class="section fade-right">
+    <h2>Tipe Kulit Wajah</h2>
+    <div class="grid">
+      <div class="card fade-up" data-delay="0s">
+        <img src="kulit-kering.jpeg" alt="Kulit Kering" class="tipe-img">
+        <h3>Kulit Kering</h3>
+        <p>Cenderung terasa kaku dan mudah terkelupas. Butuh kelembapan ekstra.</p>
+      </div>
+      <div class="card fade-up" data-delay="0.2s">
+        <img src="kulit-berminyak.jpeg" alt="Kulit Berminyak" class="tipe-img">
+        <h3>Kulit Berminyak</h3>
+        <p>Sering tampak mengkilap dan mudah berjerawat. Butuh perawatan pengontrol sebum.</p>
+      </div>
+      <div class="card fade-up" data-delay="0.4s">
+        <img src="kulit-kombinasi.png" alt="Kulit Kombinasi" class="tipe-img">
+        <h3>Kulit Kombinasi</h3>
+        <p>Bagian T-zone berminyak, bagian pipi kering. Butuh perawatan seimbang.</p>
+      </div>
+      <div class="card fade-up" data-delay="0.6s">
+        <img src="kulit-sensitif.jpg" alt="Kulit Sensitif" class="tipe-img">
+        <h3>Kulit Sensitif</h3>
+        <p>Mudah iritasi atau kemerahan. Gunakan produk lembut tanpa alkohol.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERAWATAN -->
+  <section id="perawatan" class="section light fade-left">
+    <h2>Cara Merawat Kulit Wajah</h2>
+    <div class="perawatan-container">
+      <img src="perawatan.jpeg" alt="Perawatan Kulit" class="perawatan-img">
+      <ul class="tips">
+        <li>Gunakan pembersih wajah sesuai tipe kulit.</li>
+        <li>Selalu gunakan sunscreen di pagi dan siang hari.</li>
+        <li>Gunakan pelembap secara rutin.</li>
+        <li>Hindari tidur dengan makeup.</li>
+        <li>Konsumsi air putih yang cukup dan makanan bergizi.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PENYAKIT KULIT -->
+  <section id="penyakit" class="section fade-right">
+    <h2>Penyakit Umum pada Kulit Wajah</h2>
+    <div class="grid">
+      <div class="card fade-up">
+        <img src="jerawat.jpg" alt="Jerawat" class="penyakit-img">
+        <h3>Jerawat</h3>
+        <p>Disebabkan oleh penyumbatan pori-pori dan produksi minyak berlebih.</p>
+      </div>
+      <div class="card fade-up">
+        <img src="eksim.jpg" alt="Eksim" class="penyakit-img">
+        <h3>Eksim</h3>
+        <p>Menimbulkan rasa gatal dan kemerahan akibat peradangan kulit.</p>
+      </div>
+      <div class="card fade-up">
+        <img src="rosacea.jpg" alt="Rosacea" class="penyakit-img">
+        <h3>Rosacea</h3>
+        <p>Menimbulkan kemerahan dan pembuluh darah terlihat pada wajah.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAK -->
+  <section id="kontak" class="section light fade-up">
+    <h2>Hubungi Kami</h2>
+    <form class="fade-up">
+      <input type="text" placeholder="Nama Anda" required data-delay="0s">
+      <input type="email" placeholder="Email Anda" required data-delay="0.2s">
+      <textarea placeholder="Pesan Anda" required data-delay="0.4s"></textarea>
+      <button type="submit" data-delay="0.6s">Kirim Pesan</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="fade-in">
+    <p>&copy; 2025 SkinCare Guide | Semua Hak Dilindungi</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

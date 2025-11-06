@@ -1,0 +1,338 @@
+/* === STYLE UMUM === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* === HEADER === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f7f7;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #2e8b57;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #2e8b57;
+}
+
+/* === HERO === */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background: #e8f5e9;
+}
+
+.hero-content {
+  flex: 1 1 45%;
+}
+
+.hero img {
+  flex: 1 1 45%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  color: #2e8b57;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta {
+  background: #2e8b57;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta:hover {
+  background: #246b44;
+}
+
+/* === SECTION === */
+.section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.section.light {
+  background: #f9f9f9;
+}
+
+.section h2 {
+  color: #2e8b57;
+  margin-bottom: 2rem;
+}
+
+/* === GRID CARD === */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* === LIST === */
+.tips {
+  list-style: none;
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.tips li {
+  padding: 0.5rem 0;
+}
+
+/* === FORM === */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 1rem;
+}
+
+form input, form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #2e8b57;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #246b44;
+}
+
+/* === FOOTER === */
+footer {
+  background: #2e8b57;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* === ANIMASI YANG LEBIH SMOOTH === */
+.fade-in,
+.fade-up,
+.fade-right,
+.fade-left {
+  opacity: 0;
+  transform: translateY(30px) scale(0.97);
+  transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+/* Saat elemen terlihat */
+.fade-in.visible,
+.fade-up.visible,
+.fade-right.visible,
+.fade-left.visible {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Variasi arah animasi */
+.fade-up { transform: translateY(40px) scale(0.96); }
+.fade-right { transform: translateX(60px); }
+.fade-left { transform: translateX(-60px); }
+
+/* Tambahan efek halus saat hover di card */
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+/* === ANIMASI DENGAN DELAY BERTAHAP === */
+.fade-in,
+.fade-up,
+.fade-right,
+.fade-left {
+  opacity: 0;
+  transform: translateY(40px) scale(0.97);
+  transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.fade-up.visible,
+.fade-right.visible,
+.fade-left.visible,
+.fade-in.visible {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Arah gerak */
+.fade-right { transform: translateX(60px); }
+.fade-left { transform: translateX(-60px); }
+
+/* Efek gelombang — tiap elemen muncul dengan sedikit delay */
+[data-delay] {
+  transition-delay: var(--delay, 0s);
+}
+
+/* Tambahan efek hover card */
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+/* === GAMBAR TIPE KULIT === */
+.tipe-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .tipe-img {
+  transform: scale(1.05);
+}
+/* === PERAWATAN === */
+.perawatan-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.perawatan-img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.perawatan-img:hover {
+  transform: scale(1.05);
+}
+
+.tips {
+  flex: 1;
+  list-style: none;
+  text-align: left;
+  line-height: 1.8;
+}
+/* === GAMBAR PENYAKIT === */
+.penyakit-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover .penyakit-img {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+/* === Tombol CTA ("Pelajari Sekarang") === */
+.cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #4caf50; /* warna hijau lembut */
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.cta:hover {
+  background-color: #43a047;
+  transform: scale(1.05);
+}
+
+/* Animasi bounce */
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
